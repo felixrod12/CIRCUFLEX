@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://ywklpsgjapto"]
+
+[ext_resource type="Script" uid="uid://bttxej8nimifa" path="res://menú_inicio.gd" id="1_wd6yl"]
+[ext_resource type="AudioStream" uid="uid://d0hrjj2ijgvmh" path="res://BOTON.mp3" id="2_d2be7"]
+
+[sub_resource type="Theme" id="Theme_2aqe5"]
+
+[node name="MenúInicio" type="Control" unique_id=390957610]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wd6yl")
+
+[node name="Label" type="Label" parent="." unique_id=1036516480]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 14.0
+offset_right = 676.0
+offset_bottom = 37.0
+text = "CIRCUFLEX: SIMULADOR ELÉCTRICO"
+
+[node name="Button" type="Button" parent="." unique_id=2011544939]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 51.0
+offset_right = 577.0
+offset_bottom = 82.0
+text = "¡JUGAR!"
+
+[node name="SonidoBotonMenu" type="AudioStreamPlayer2D" parent="." unique_id=473794989]
+stream = ExtResource("2_d2be7")
+volume_db = 5.0
+
+[node name="Label2" type="Label" parent="." unique_id=683203204]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -133.5
+offset_top = -101.0
+offset_right = 133.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_2aqe5")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Curso: Matemática Computacional
+Profesor: Josué Miranda
+Alumno: Félix Rodríguez
+				2026"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

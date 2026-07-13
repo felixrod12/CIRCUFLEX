@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bmaa2oewwulpa"]
+
+[ext_resource type="Script" uid="uid://cub1h2gr7e023" path="res://mundo.gd" id="1_6ba58"]
+[ext_resource type="Texture2D" uid="uid://ogynwcqajep8" path="res://BATERIA.png" id="2_otwa2"]
+[ext_resource type="Texture2D" uid="uid://ct22d5s1dicqx" path="res://FOCO.png" id="3_aou4a"]
+[ext_resource type="Texture2D" uid="uid://rnnr8o017a1w" path="res://SWITCH.png" id="4_5ckkb"]
+[ext_resource type="AudioStream" uid="uid://t2bmrtve5rg4" path="res://FONDO.mp3" id="5_aou4a"]
+[ext_resource type="AudioStream" uid="uid://ck1pmm1bjy202" path="res://ALERTA.mp3" id="6_2hh7m"]
+[ext_resource type="Script" uid="uid://dfhbdrydy4qi1" path="res://circuito_dibuja.gd" id="6_5ckkb"]
+
+[node name="MUNDO" type="Node2D" unique_id=1619995481]
+script = ExtResource("1_6ba58")
+
+[node name="Batería" type="Sprite2D" parent="." unique_id=671072738]
+position = Vector2(239, 286)
+scale = Vector2(0.63, 0.5)
+texture = ExtResource("2_otwa2")
+
+[node name="Foco" type="Sprite2D" parent="." unique_id=2028713995]
+position = Vector2(853, 259)
+scale = Vector2(0.41210938, 0.40625)
+texture = ExtResource("3_aou4a")
+
+[node name="Interruptor" type="Sprite2D" parent="." unique_id=84461056]
+position = Vector2(555, 252)
+scale = Vector2(0.546875, 0.44140625)
+texture = ExtResource("4_5ckkb")
+
+[node name="TextoAmperios" type="Label" parent="." unique_id=120052394]
+offset_left = 453.0
+offset_top = 30.0
+offset_right = 653.0
+offset_bottom = 62.0
+text = "Cargando datos eléctricos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MUSICAFONDO" type="AudioStreamPlayer2D" parent="." unique_id=1163107517]
+stream = ExtResource("5_aou4a")
+volume_db = 1.0
+autoplay = true
+
+[node name="SONBOTON" type="AudioStreamPlayer2D" parent="." unique_id=1593372502]
+volume_db = 15.0
+
+[node name="SONALERTA" type="AudioStreamPlayer2D" parent="." unique_id=2065327721]
+stream = ExtResource("6_2hh7m")
+volume_db = 10.0
+
+[node name="CircuitoDibuja" type="Node2D" parent="." unique_id=159970548]
+script = ExtResource("6_5ckkb")
