@@ -1,0 +1,6 @@
+[configuration]
+entry_symbol = "circuiflex_library_init"
+compatibility_minimum = "4.2"
+
+[libraries]
+windows.template_debug.x86_64 = "res://bin/libcircuiflex.windows.template_debug.x86_64.dll"
